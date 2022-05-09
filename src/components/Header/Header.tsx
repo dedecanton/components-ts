@@ -11,6 +11,16 @@ import {
 const Header = () => {
   const [menuIsActive, setMenuIsActive] = useState<boolean>(false);
 
+  const [headerstyle, setHeaderstyle] = useState<string>('expanded');
+
+  window.onscroll = () => {
+    if (window.scrollY > 20) {
+      setHeaderstyle('condensed');
+    } else {
+      setHeaderstyle('expanded');
+    }
+  };
+
   const handleMenuIsActive = () => {
     setMenuIsActive(!menuIsActive);
   };
@@ -20,7 +30,7 @@ const Header = () => {
   }
 
   return (
-    <HeaderComponent>
+    <HeaderComponent headerstyle={headerstyle}>
       <HeaderContainer>
         <NavToggle active={menuIsActive} onClick={handleMenuIsActive}>
           {!menuIsActive && <MenuIcon />}

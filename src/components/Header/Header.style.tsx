@@ -2,8 +2,26 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import tw from "twin.macro";
 
+type headerProps = {
+  headerstyle: string;
+}
+
 export const HeaderComponent = styled.header`
-${tw`fixed top-0 left-0 w-full z-[100] border-b border-gray-100 border-opacity-50`}`;
+  ${tw`fixed top-0 left-0
+    w-full
+    z-[100]
+    border-b border-gray-100 border-opacity-50
+    bg-transparent
+    transition-all
+    duration-500
+    `}
+  
+  ${({headerstyle}:headerProps) => headerstyle === 'condensed' && tw`bg-gray-900 border-gray-900`}
+  
+  div{
+    ${({headerstyle}:headerProps) => headerstyle === 'condensed' && tw`py-1`}
+  }
+`;
 
 export const HeaderContainer = styled.div`
   ${tw`
@@ -14,6 +32,8 @@ export const HeaderContainer = styled.div`
         max-w-screen-xl
         mx-auto
         p-4
+        transition-all
+        duration-500
     `}
 `
 
