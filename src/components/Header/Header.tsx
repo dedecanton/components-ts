@@ -3,11 +3,9 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import {
   HeaderComponent,
   HeaderContainer,
-  LogoLink,
   NavLink,
   NavLinks,
   NavToggle,
-  PrimaryLink,
 } from "./Header.style";
 
 const Header = () => {
@@ -17,21 +15,23 @@ const Header = () => {
     setMenuIsActive(!menuIsActive);
   };
 
+  const handleNavClick = () => {
+    setMenuIsActive(false)
+  }
+
   return (
     <HeaderComponent>
       <HeaderContainer>
-        <LogoLink>Logo</LogoLink>
-        <NavToggle onClick={handleMenuIsActive}>
+        <NavToggle active={menuIsActive} onClick={handleMenuIsActive}>
           {!menuIsActive && <MenuIcon />}
           {menuIsActive && <XIcon />}
         </NavToggle>
 
         <NavLinks active={menuIsActive}>
-          <NavLink href="#">Home</NavLink>
-          <NavLink href="#">About</NavLink>
-          <NavLink href="#">Blog</NavLink>
-          <NavLink href="#">Price</NavLink>
-          <PrimaryLink>Signup</PrimaryLink>
+          <NavLink onClick={handleNavClick} href="#">Home</NavLink>
+          <NavLink onClick={handleNavClick} href="#">About</NavLink>
+          <NavLink onClick={handleNavClick} href="#">Blog</NavLink>
+          <NavLink onClick={handleNavClick} href="#">Price</NavLink>
         </NavLinks>
       </HeaderContainer>
     </HeaderComponent>
