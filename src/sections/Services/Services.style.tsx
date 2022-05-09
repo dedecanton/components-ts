@@ -33,6 +33,6 @@ export const Image = styled.div`
 
 `
 
-export const Details = tw.div`p-6 rounded border-2 border-t-0 rounded-t-none border-dashed border-purple-100 flex-1 flex flex-col items-center text-center lg:block lg:text-left`;
+export const Details = tw.div`text-center p-6 rounded border-2 border-t-0 rounded-t-none border-dashed border-purple-100 flex-1 flex flex-col items-center lg:block`;
 export const Title = tw.h5`mt-4 leading-snug font-bold text-lg`;
   
