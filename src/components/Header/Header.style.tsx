@@ -3,6 +3,9 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const HeaderComponent = styled.header`
+${tw`fixed top-0 left-0 w-full border-b-2 border-blue-500`}`;
+
+export const HeaderContainer = styled.div`
   ${tw`
         flex
         justify-between
@@ -11,7 +14,7 @@ export const HeaderComponent = styled.header`
         mx-auto
         p-4
     `}
-`;
+`
 
 type navProps = {
     active:boolean
@@ -23,7 +26,7 @@ ${tw`
     flex flex-col items-center justify-center
     transition-all duration-500
 
-    md:(flex-row mx-auto h-auto w-auto static flex-1 justify-end)
+    md:(flex-row mx-auto h-auto static justify-end)
 `}
 
     ${({active}:navProps) => active && tw`right-0`}
@@ -46,7 +49,7 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! text-center md:flex-1`};
+  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! text-center`};
   img {
     ${tw`w-10 mr-3`}
   }

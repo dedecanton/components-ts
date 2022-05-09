@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import {
   HeaderComponent,
+  HeaderContainer,
   LogoLink,
   NavLink,
   NavLinks,
@@ -10,28 +11,29 @@ import {
 } from "./Header.style";
 
 const Header = () => {
-  const [menuIsActive, setMenuIsActive] = useState<boolean>(false)
+  const [menuIsActive, setMenuIsActive] = useState<boolean>(false);
 
   const handleMenuIsActive = () => {
-    setMenuIsActive(!menuIsActive)
-    console.log('oi')
-  }
+    setMenuIsActive(!menuIsActive);
+  };
 
   return (
     <HeaderComponent>
-      <LogoLink>Logo</LogoLink>
-      <NavToggle onClick={handleMenuIsActive}>
-        {!menuIsActive && <MenuIcon />}
-        {menuIsActive && <XIcon/>}        
-      </NavToggle>
+      <HeaderContainer>
+        <LogoLink>Logo</LogoLink>
+        <NavToggle onClick={handleMenuIsActive}>
+          {!menuIsActive && <MenuIcon />}
+          {menuIsActive && <XIcon />}
+        </NavToggle>
 
-      <NavLinks active={menuIsActive}>
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#">About</NavLink>
-        <NavLink href="#">Blog</NavLink>
-        <NavLink href="#">Price</NavLink>
-        <PrimaryLink>Signup</PrimaryLink>
-      </NavLinks>
+        <NavLinks active={menuIsActive}>
+          <NavLink href="#">Home</NavLink>
+          <NavLink href="#">About</NavLink>
+          <NavLink href="#">Blog</NavLink>
+          <NavLink href="#">Price</NavLink>
+          <PrimaryLink>Signup</PrimaryLink>
+        </NavLinks>
+      </HeaderContainer>
     </HeaderComponent>
   );
 };
