@@ -1,7 +1,9 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/outline";
 import React from "react";
-import { SwiperSlide } from "swiper/react";
-import "swiper/css";
+
+import 'keen-slider/keen-slider.min.css'
+import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
+
 
 import {
   TestimonialContainer,
@@ -48,35 +50,46 @@ const testimonials = [
 ];
 
 const TestimonialComponent = () => {
-  const navigationPrevRef = React.useRef<HTMLButtonElement>(null);
-  const navigationNextRef = React.useRef<HTMLButtonElement>(null);
+  const [refCallback,  instanceRef] = useKeenSlider({loop:true})
+  
+  const handleNextArrow = () => {
+    instanceRef.current?.next()
+  }
+  
+  const handlePrevArrow = () => {
+    instanceRef.current?.prev()
+  }
 
   return (
     <TestimonialContainer>
       <TestimonialTitle>Depoimentos</TestimonialTitle>
 
-      <TestimonialsSlider>
+      <TestimonialsSlider ref={refCallback} className='keen-slider'>
         {testimonials.map((testimonial, index) => (
-          <Testimonial key={index}>
+          <Testimonial key={index} className="keen-slider__slide">
             <QuoteContainer>
               <QuoteIcon />
               <Quote>{testimonial.quote}</Quote>
             </QuoteContainer>
+
             <CustomerInfoAndControlsContainer>
               <CustomerImage src={testimonial.imageSrc} />
               <CustomerNameAndProfileContainer>
                 <CustomerName>{testimonial.customerName}</CustomerName>
                 <CustomerProfile>{testimonial.customerProfile}</CustomerProfile>
               </CustomerNameAndProfileContainer>
+              
               <ControlsContainer>
-                <ControlButton>
-                  <ArrowLeftIcon/>
+                <ControlButton onClick={handlePrevArrow}>
+                  <ArrowLeftIcon className="icon" />
                 </ControlButton>
-                <ControlButton>
-                  <ArrowRightIcon/>
+
+                <ControlButton onClick={handleNextArrow}>
+                  <ArrowRightIcon className="icon"/>
                 </ControlButton>
               </ControlsContainer>
             </CustomerInfoAndControlsContainer>
+
           </Testimonial>
         ))}
       </TestimonialsSlider>
