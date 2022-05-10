@@ -9,11 +9,11 @@ type SocialProps = {
 
 const Social = ({className}:SocialProps) => {
   return (
-    <Container className={className && className}>
-      <SocialLink href='https://www.facebook.com/caiiorizzi/' target={'_blank'} >
+    <Container >
+      <SocialLink className={className} href='https://www.facebook.com/caiiorizzi/' target={'_blank'} >
         <GrFacebook />
       </SocialLink>
-      <SocialLink href='https://www.instagram.com/tochettosbarbearia/' target={'_blank'}>
+      <SocialLink className={className} href='https://www.instagram.com/tochettosbarbearia/' target={'_blank'}>
         <GrInstagram />
       </SocialLink>
     </Container>
