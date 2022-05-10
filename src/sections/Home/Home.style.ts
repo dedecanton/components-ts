@@ -1,25 +1,10 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-import { Overlay, SectionContainer, SectionSubtitle, SectionTitle } from "../../components/SectionStyles";
+import SectionWithImage from "../../components/Section/SectionWithImage";
 
-export const Container = styled.section`
-    background-image: url('/barber.jpg');
-    background-size: cover;
-    background-position: center;
-    ${tw`w-full h-screen relative py-10`}
+export const HomeSubtitle = styled.h2`
+    ${tw`text-xl max-w-2xl`}
 `
-
-export const BackgroundOverlay = tw(Overlay)``
-
-export const HomeContent = tw(SectionContainer)`
-    text-white
-    h-full 
-    space-y-8 
-`
-
-export const HomeTitle = styled(SectionTitle)``;
-export const HomeSubtitle = styled(SectionSubtitle)``
-
 export const HomeLink = styled.a`
     ${tw`
     uppercase
@@ -32,3 +17,16 @@ export const HomeLink = styled.a`
     sm:mt-16 sm:px-8 sm:py-4
     shadow transition duration-300 hocus:(bg-white text-black scale-105 shadow-2xl font-bold)  `}
 `
+
+
+export const Section = styled(SectionWithImage)`
+    ${tw`h-screen`}
+
+    main{
+        ${tw`space-y-8 `}
+    }
+
+    h1{
+        ${tw`mb-0 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl `}
+    }
+    `

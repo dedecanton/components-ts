@@ -2,20 +2,12 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { BadgeCheckIcon } from "@heroicons/react/solid";
 
+import SectionWithColor from "../../components/Section/SectionWithColor";
+export const TestimonialSection = styled(SectionWithColor)``
 
-import {
-  SectionContainer,
-  SectionTitle,
-  SectionSubtitle,
-} from "../../components/SectionStyles";
-
-export const TestimonialContainer = styled(SectionContainer)``;
-
-export const TestimonialTitle = tw(SectionTitle)``;
-export const TestimonialDescription = tw(SectionSubtitle)``;
 
 export const TestimonialsSlider = styled.div`
-  ${tw`flex mt-16 mx-auto max-w-xs sm:max-w-xl lg:max-w-4xl text-left bg-gray-100 rounded-lg text-gray-900`}
+  ${tw`flex mx-auto max-w-xs sm:max-w-xl lg:max-w-4xl text-left bg-gray-100 rounded-lg text-gray-900`}
   .slick-track {
     ${tw`flex!`}
   }

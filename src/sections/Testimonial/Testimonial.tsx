@@ -6,9 +6,7 @@ import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/re
 
 
 import {
-  TestimonialContainer,
   TestimonialsSlider,
-  TestimonialTitle,
   CustomerInfoAndControlsContainer,
   CustomerNameAndProfileContainer,
   CustomerImage,
@@ -20,6 +18,7 @@ import {
   QuoteIcon,
   Quote,
   Testimonial,
+  TestimonialSection,
 } from "./Testimonial.style";
 
 const testimonials = [
@@ -50,7 +49,7 @@ const testimonials = [
 ];
 
 const TestimonialComponent = () => {
-  const [refCallback,  instanceRef] = useKeenSlider({loop:true})
+  const [refCallback,  instanceRef] = useKeenSlider({loop:true, })
   
   const handleNextArrow = () => {
     instanceRef.current?.next()
@@ -61,10 +60,8 @@ const TestimonialComponent = () => {
   }
 
   return (
-    <TestimonialContainer>
-      <TestimonialTitle>Depoimentos</TestimonialTitle>
-
-      <TestimonialsSlider ref={refCallback} className='keen-slider'>
+    <TestimonialSection id='testimonials' title="Depoimentos" >
+          <TestimonialsSlider ref={refCallback} className='keen-slider'>
         {testimonials.map((testimonial, index) => (
           <Testimonial key={index} className="keen-slider__slide">
             <QuoteContainer>
@@ -93,7 +90,7 @@ const TestimonialComponent = () => {
           </Testimonial>
         ))}
       </TestimonialsSlider>
-    </TestimonialContainer>
+    </TestimonialSection>
   );
 };
 
