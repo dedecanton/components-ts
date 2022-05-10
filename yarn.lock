@@ -1574,14 +1574,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
-"@owaiswiz/use-in-view@^1.0.16":
-  "integrity" "sha512-SZBYXro1WzyzrMKi4O7pGGw2vxLenYdUrUAOD1O5TGhndMz7RlXwuHHPk6K3yWzuT+9jUjrYbhI38ZnXlnEjPg=="
-  "resolved" "https://registry.npmjs.org/@owaiswiz/use-in-view/-/use-in-view-1.0.16.tgz"
-  "version" "1.0.16"
-  dependencies:
-    "lodash.throttle" "^4.1.1"
-    "react" "^17.0.2"
-
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   "integrity" "sha512-RbG7h6TuP6nFFYKJwbcToA1rjC1FyPg25NR2noAZ0vKI+la01KTSRPkuVPE+U88jXv7javx2JHglUcL1MHcshQ=="
   "resolved" "https://registry.npmjs.org/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.5.tgz"
@@ -3862,13 +3854,6 @@
   dependencies:
     "domelementtype" "^2.0.1"
     "entities" "^2.0.0"
-
-"dom7@^4.0.4":
-  "integrity" "sha512-DSSgBzQ4rJWQp1u6o+3FVwMNnT5bzQbMb+o31TjYYeRi05uAcpF8koxdfzeoe5ElzPmua7W7N28YJhF7iEKqIw=="
-  "resolved" "https://registry.npmjs.org/dom7/-/dom7-4.0.4.tgz"
-  "version" "4.0.4"
-  dependencies:
-    "ssr-window" "^4.0.0"
 
 "domelementtype@^2.0.1", "domelementtype@^2.2.0":
   "integrity" "sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw=="
@@ -6182,11 +6167,6 @@
   "resolved" "https://registry.npmjs.org/lodash.sortby/-/lodash.sortby-4.7.0.tgz"
   "version" "4.7.0"
 
-"lodash.throttle@^4.1.1":
-  "integrity" "sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ="
-  "resolved" "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz"
-  "version" "4.1.1"
-
 "lodash.topath@^4.5.2":
   "integrity" "sha1-NhY1Hzu6YZlKCTGYlmC9AyVP0Ak="
   "resolved" "https://registry.npmjs.org/lodash.topath/-/lodash.topath-4.5.2.tgz"
@@ -7583,6 +7563,11 @@
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   "version" "6.0.11"
 
+"react-icons@^4.3.1":
+  "integrity" "sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ=="
+  "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.3.1.tgz"
+  "version" "4.3.1"
+
 "react-is@^16.13.1":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -7663,15 +7648,7 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
-"react@^17.0.2":
-  "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
-  "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
-  "version" "17.0.2"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-
-"react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>= 16.8.0", "react@>=16.8 || ^17.0.0 || ^18.0.0", "react@>=16.8.0":
+"react@*", "react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>= 16.8.0", "react@>=16.8 || ^17.0.0 || ^18.0.0", "react@>=16.8.0":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.1.0.tgz"
   "version" "18.1.0"
@@ -8284,11 +8261,6 @@
   "resolved" "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
   "version" "1.0.3"
 
-"ssr-window@^4.0.0", "ssr-window@^4.0.2":
-  "integrity" "sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ=="
-  "resolved" "https://registry.npmjs.org/ssr-window/-/ssr-window-4.0.2.tgz"
-  "version" "4.0.2"
-
 "stable@^0.1.8":
   "integrity" "sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w=="
   "resolved" "https://registry.npmjs.org/stable/-/stable-0.1.8.tgz"
@@ -8571,14 +8543,6 @@
     "csso" "^4.2.0"
     "picocolors" "^1.0.0"
     "stable" "^0.1.8"
-
-"swiper@^8.1.4":
-  "integrity" "sha512-ho6ceKxqbDxV51qymVxwn1oB4CqTrsG3Y5pGW2aKlZxsT6NMdlow8ICUa+wD/m5l2T5ZD2B0yyqTihSSmLBV4A=="
-  "resolved" "https://registry.npmjs.org/swiper/-/swiper-8.1.4.tgz"
-  "version" "8.1.4"
-  dependencies:
-    "dom7" "^4.0.4"
-    "ssr-window" "^4.0.2"
 
 "symbol-tree@^3.2.4":
   "integrity" "sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw=="

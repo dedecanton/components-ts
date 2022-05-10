@@ -7,6 +7,7 @@ import {
   NavLinks,
   NavToggle,
 } from "./Header.style";
+import Social from "../Social";
 
 const Header = () => {
   const [menuIsActive, setMenuIsActive] = useState<boolean>(false);
@@ -32,7 +33,7 @@ const Header = () => {
   return (
     <HeaderComponent headerstyle={headerstyle}>
       <HeaderContainer>
-        <NavToggle active={menuIsActive} onClick={handleMenuIsActive}>
+        <NavToggle onClick={handleMenuIsActive}>
           {!menuIsActive && <MenuIcon />}
           {menuIsActive && <XIcon />}
         </NavToggle>
@@ -43,6 +44,7 @@ const Header = () => {
           <NavLink onClick={handleNavClick} href="#services">Serviços</NavLink>
           <NavLink onClick={handleNavClick} href="#testimonials">Depoimentos</NavLink>
           <NavLink onClick={handleNavClick} href="#location">Localização</NavLink>
+          <Social className='md:hidden'/>
         </NavLinks>
       </HeaderContainer>
     </HeaderComponent>

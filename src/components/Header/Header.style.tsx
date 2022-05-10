@@ -45,7 +45,7 @@ ${tw`
     w-full h-screen
     flex flex-col items-center justify-center
     transition-all duration-500
-    bg-white
+    bg-gray-900
     md:(flex-row mx-auto h-auto static bg-transparent )
 `}
 
@@ -53,11 +53,11 @@ ${tw`
 `;
 
 export const NavLink = tw.a`
-  text-black text-lg my-2 lg:mx-6 lg:my-0
+  text-white text-2xl my-2 lg:mx-6 lg:my-0
   font-bold tracking-wide transition duration-300
   pb-1 border-b-2 border-transparent hocus:(border-white scale-110)
 
-  md:(ml-4 text-white)
+  md:(ml-4 text-lg)
 `;
 
 // export const PrimaryLink = tw(NavLink)`
@@ -82,9 +82,6 @@ export const NavToggle = styled.button`
         md:(hidden)
         focus:outline-none hocus:(transition duration-300)
     `}
-
-    ${({active}:navProps) => active && tw`text-black`}
-    
     svg{
         ${tw`w-8 h-8`}
     }
