@@ -10,13 +10,12 @@ export const HeaderComponent = styled.header`
   ${tw`fixed top-0 left-0
     w-full
     z-[100]
-    border-b border-gray-100 border-opacity-50
     bg-transparent
     transition-all
     duration-500
     `}
   
-  ${({headerstyle}:headerProps) => headerstyle === 'condensed' && tw`bg-gray-900 border-gray-900`}
+  ${({headerstyle}:headerProps) => headerstyle === 'condensed' && tw`bg-gray-900`}
   
   div{
     ${({headerstyle}:headerProps) => headerstyle === 'condensed' && tw`py-1`}

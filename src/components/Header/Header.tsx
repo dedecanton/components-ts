@@ -38,10 +38,10 @@ const Header = () => {
         </NavToggle>
 
         <NavLinks active={menuIsActive}>
-          <NavLink onClick={handleNavClick} href="#">Home</NavLink>
-          <NavLink onClick={handleNavClick} href="#">About</NavLink>
-          <NavLink onClick={handleNavClick} href="#">Blog</NavLink>
-          <NavLink onClick={handleNavClick} href="#">Price</NavLink>
+          <NavLink onClick={handleNavClick} href="#home">Início</NavLink>
+          <NavLink onClick={handleNavClick} href="#about">Sobre</NavLink>
+          <NavLink onClick={handleNavClick} href="#services">Serviços</NavLink>
+          <NavLink onClick={handleNavClick} href="#testimonials">Depoimentos</NavLink>
         </NavLinks>
       </HeaderContainer>
     </HeaderComponent>
