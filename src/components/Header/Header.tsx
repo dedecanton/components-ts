@@ -42,6 +42,7 @@ const Header = () => {
           <NavLink onClick={handleNavClick} href="#about">Sobre</NavLink>
           <NavLink onClick={handleNavClick} href="#services">Serviços</NavLink>
           <NavLink onClick={handleNavClick} href="#testimonials">Depoimentos</NavLink>
+          <NavLink onClick={handleNavClick} href="#location">Localização</NavLink>
         </NavLinks>
       </HeaderContainer>
     </HeaderComponent>
