@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "./components/Footer/";
+import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import About from "./sections/About";
 import Home from "./sections/Home";
@@ -16,6 +17,7 @@ function App() {
       <Services />
       <Testimonial/>      
       {/* Galeria */}
+      <Gallery/>
       <Location/>
       <Footer/>
     </div>

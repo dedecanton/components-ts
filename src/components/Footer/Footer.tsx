@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 import Social from "../Social";
 
+import links from '../menus.json'
+
 
 
 const Container = tw.div`relative bg-gray-900 text-gray-100 -mb-8`
@@ -37,11 +39,9 @@ export default () => {
             <LogoText>Tochetto's Barbearia</LogoText>
           </LogoContainer>
           <LinksContainer>
-            <Link href="#home">Início</Link>
-            <Link href="#about">Sobre</Link>
-            <Link href="#services">Serviços</Link>
-            <Link href="#testimonials">Depoimentos</Link>
-            <Link href="#location">Localização</Link>
+            {links.map(link => (
+              <Link key={link.title} href={link.href}>{link.title}</Link>
+            ))}
           </LinksContainer>
           <Social className="mt-4"/>
           <CopyrightText>

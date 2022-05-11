@@ -8,17 +8,18 @@ import {
   NavToggle,
 } from "./Header.style";
 import Social from "../Social";
+import links from '../menus.json'
 
 const Header = () => {
   const [menuIsActive, setMenuIsActive] = useState<boolean>(false);
 
-  const [headerstyle, setHeaderstyle] = useState<string>('expanded');
+  const [headerstyle, setHeaderstyle] = useState<string>("expanded");
 
   window.onscroll = () => {
     if (window.scrollY > 20) {
-      setHeaderstyle('condensed');
+      setHeaderstyle("condensed");
     } else {
-      setHeaderstyle('expanded');
+      setHeaderstyle("expanded");
     }
   };
 
@@ -27,8 +28,8 @@ const Header = () => {
   };
 
   const handleNavClick = () => {
-    setMenuIsActive(false)
-  }
+    setMenuIsActive(false);
+  };
 
   return (
     <HeaderComponent headerstyle={headerstyle}>
@@ -39,12 +40,10 @@ const Header = () => {
         </NavToggle>
 
         <NavLinks active={menuIsActive}>
-          <NavLink onClick={handleNavClick} href="#home">Início</NavLink>
-          <NavLink onClick={handleNavClick} href="#about">Sobre</NavLink>
-          <NavLink onClick={handleNavClick} href="#services">Serviços</NavLink>
-          <NavLink onClick={handleNavClick} href="#testimonials">Depoimentos</NavLink>
-          <NavLink onClick={handleNavClick} href="#location">Localização</NavLink>
-          <Social className="md:hidden"/>
+          {links.map((link) => (
+            <NavLink key={link.title} onClick={handleNavClick} href={link.href}>{link.title}</NavLink>
+          ))}
+          <Social className="md:hidden" />
         </NavLinks>
       </HeaderContainer>
     </HeaderComponent>
