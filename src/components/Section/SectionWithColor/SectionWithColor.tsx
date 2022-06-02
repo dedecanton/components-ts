@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useInView } from "react-intersection-observer";
+
 import {
   SectionContainer,
   SectionContent,
@@ -14,9 +16,12 @@ type SectionProps = {
 };
 
 const Section = ({ title, children, className, id }: SectionProps) => {
+
+  const [ref, inView] = useInView();
+
   return (
-    <SectionContainer id={id} className={className} >
-      <SectionContent className={'z-20 relative font-mono py-4 px-2 flex flex-col items-center justify-center text-center text-white'} >
+    <SectionContainer id={id} className={className} ref={ref} >
+      <SectionContent className={inView ? `left-0` : `left-full`} >
       <SectionTitle>{title}</SectionTitle>
           {children}
         </SectionContent>

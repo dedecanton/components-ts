@@ -7,7 +7,7 @@ type GaleryType = {
 }
 
 export const Slide = styled.div`
-    ${tw`h-96 mobile:h-[30rem] bg-cover bg-no-repeat rounded mb-2`}
+    ${tw`h-96  bg-cover bg-no-repeat rounded mb-2`}
     background-image: url(${({image}:GaleryType) => image});
     background-position: center;
     

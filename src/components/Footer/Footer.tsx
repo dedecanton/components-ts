@@ -1,8 +1,8 @@
 import React from "react";
 import tw from "twin.macro";
-import styled from "styled-components";
+// import styled from "styled-components";
 
-import Social from "../Social";
+// import Social from "../Social";
 
 import links from '../menus.json'
 
@@ -21,12 +21,8 @@ const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center ite
 const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
 const SocialLinksContainer = tw.div`mt-10`;
-const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4`}
-  svg {
-    ${tw`w-5 h-5`}
-  }
-`;
+const SocialLink = tw.a`
+  cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4`;
 
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`
 export default () => {
@@ -43,7 +39,7 @@ export default () => {
               <Link key={link.title} href={link.href}>{link.title}</Link>
             ))}
           </LinksContainer>
-          <Social className="mt-4"/>
+          {/* <Social className="mt-4"/> */}
           <CopyrightText>
             &copy; Copyright 2020, Tochetto's Barbearia. Todos direitos reservados.
           </CopyrightText>

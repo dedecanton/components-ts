@@ -1,5 +1,5 @@
 import React, { MutableRefObject } from "react";
-// import "./styles.css"
+
 import {
   useKeenSlider,
   KeenSliderPlugin,
@@ -43,6 +43,7 @@ function ThumbnailPlugin(
 }
 
 const Gallery = () => {
+  
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
   });

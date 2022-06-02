@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import tw from "twin.macro";
-import SectionWithImage from ".";
 
 export type sectionProps = {
   image: string;
@@ -9,7 +9,8 @@ export const SectionContainer = styled.section`
   background-image: url(  ${({image}: sectionProps) =>  image});
   background-size: cover;
   background-position: center;
-  ${tw`w-full relative py-10 px-2`}
+  ${tw`w-full relative py-10 px-2 max-w-full overflow-hidden`}
+  
 `;
 
 export const SectionContent = tw.main`
@@ -26,7 +27,9 @@ export const SectionContent = tw.main`
     mx-auto
     h-full
     text-white
-`;
+    transition-all
+    duration-1000
+    `;
 export const SectionTitle = styled.h1`
   ${tw`mb-8 font-mono text-3xl text-center font-black sm:text-4xl lg:text-5xl xl:text-6xl leading-snug `}
   span {

@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
+
+import { useInView } from "react-intersection-observer";
+
 import {
   Overlay,
   SectionContainer,
@@ -16,14 +17,24 @@ type SectionProps = {
   id: string;
 };
 
-const Section = ({ title, children, image, className, id }: SectionProps) => {
+const Section = ({
+  title,
+  children,
+  image,
+  className,
+  id,
+}: SectionProps) => {
+  const [ref, inView] = useInView();
+
   return (
-    <SectionContainer id={id} image={image} className={className && className}>
+    <SectionContainer id={id} image={image} className={className} ref={ref}>
       <Overlay />
-      <SectionContent >
-      <SectionTitle>{title}</SectionTitle>
-          {children}
-        </SectionContent>
+      <SectionContent
+        className={inView ? `right-0` : `right-full`}
+      >
+        <SectionTitle>{title}</SectionTitle>
+        {children}
+      </SectionContent>
     </SectionContainer>
   );
 };

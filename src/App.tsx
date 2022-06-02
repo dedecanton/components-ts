@@ -9,6 +9,7 @@ import Services from "./sections/Services";
 import Testimonial from "./sections/Testimonial";
 
 function App() {
+
   return (
     <div className="">
       <Header />
@@ -16,7 +17,6 @@ function App() {
       <About/>
       <Services />
       <Testimonial/>      
-      {/* Galeria */}
       <Gallery/>
       <Location/>
       <Footer/>
